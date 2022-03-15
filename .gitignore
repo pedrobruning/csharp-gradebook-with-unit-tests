@@ -1,3 +1,5 @@
 src/Gradebook/bin
 .vscode
 src/Gradebook/obj/Debug
+test/Gradebook.Tests/bin
+test/Gradebook.Tests/obj/Debug
