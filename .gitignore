@@ -1,1 +1,3 @@
 src/Gradebook/bin
+.vscode
+src/Gradebook/obj/Debug
