@@ -1,6 +1,6 @@
 namespace GradeBook
 {
-    class Book
+    public class Book
     {        
         public Book(string name)
         {
@@ -44,14 +44,14 @@ namespace GradeBook
             return grades.Max();
         }
 
-        public void ShowStatistics()
+        public Statistics GetStatistics()
         {
-            Console.WriteLine(this.name);
-            Console.WriteLine($"Result: {GetSum()}");
-            Console.WriteLine($"Average: {GetAverage():N1}");
-            Console.WriteLine($"Greatest Grade: {GetMax()}");
-            Console.WriteLine($"Lowest Grade: {GetMin()}");
-        }
+            var result = new Statistics();
+            result.Average = GetAverage();
+            result.High = GetMax();
+            result.Low = GetMin();
+            return result;
+        }        
 
         private List<double> grades;
         private string name;
